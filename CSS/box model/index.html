@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .box {
+            background-color: seashell;
+        }
+
+        .b1 {
+            color: #4f3d2f;
+            padding: 20px;
+            border: 7px solid olive;
+        }
+
+        .b2 {
+            color: #4f3d2f;
+            padding: 20px;
+            border: 8px solid rgb(172, 155, 5);
+        }
+
+        .img {
+            padding: 0px;
+            border: 10px solid rgb(172, 155, 5);
+            margin: 3px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            /* height puri hogi agar sirf height likhege */
+            box-sizing: border-box;
+            /* now height me padding,content aur border inlcude hogi */
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <h1>Understanding the Box Model</h1>
+        <p class="box b1">The box model is a fundamental concept in web design and development that describes how
+            elements are structured and displayed on a webpage.</p>
+
+        <h2>Components of the Box Model</h2>
+        <ul class="box b2">
+            <li><strong>Content:</strong> The actual content of the box, such as text or images.</li>
+            <li><strong>Padding:</strong> The space between the content and the border, which creates breathing room
+                around the content.</li>
+            <li><strong>Border:</strong> A line that wraps around the padding (if any) and content.</li>
+            <li><strong>Margin:</strong> The outermost layer that creates space between this box and other boxes.</li>
+        </ul>
+
+        <h2>Visual Representation</h2>
+        <p>Here's a simple diagram to illustrate the box model:</p>
+        <img class="img"
+            src="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/tutorial/css-box-model/box%20model.png"
+            alt="box image" width="500" height="300">
+
+            <h2>Margin collapse</h2>
+        <p>Margin collapse ek CSS ka feature he jo vertical margins ke beech me space ko control karta he.</p>
+        <p>Jab do block-level elements vertically stacked hote he, toh unke margins automatically adjust ho jate he
+            aur unke beech me space kam ho jata he.</p>
+            <p>Jab do box upar niche hote he toh unki margins overlap karti he. hamesha dono boxes ke beech comparatively badi margin ke box ki space hogi. </p>
+        <p>For example, agar do boxes ke beech margin 20px aur 30px he toh dono boxes ke beech 30px ki space hogi.</p>
+        <p>Isse margin collapse kehte he. Iska matlab ye nahi ki dono boxes ke beech 50px ki space hogi.</p>
+        <p>Margin collapse sirf vertical margin ke liye hota he. Horizontal margin collapse nahi hota.</p>
+        <p>Margin collapse ka use karne se layout ko control karna asaan hota he aur unwanted space se bachne me madad milti he.</p>
+    </article>
+    <img src="https://miro.medium.com/max/421/0*kAD00byJs8jdmXvr.png" alt="Diagram showing two sets of orange boxes labeled Box A and Box B, each inside a dashed border representing their container. On the left, Box A and Box B are stacked with different vertical margins, 30px and 25px, indicated by text below each box. On the right, the boxes are stacked with a single 30px margin between them, demonstrating margin collapse. A red arrow points from the left to the right set, emphasizing the change. The overall tone is educational and informative." width="500" height="300" style="display: block; margin-left: auto; margin-right: auto;">
+</body> 
+
+</html>
